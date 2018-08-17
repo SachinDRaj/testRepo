@@ -1,7 +1,5 @@
-{% extends "geonode_base.html" %}
+{% extends "index.html" %}
 {% load i18n %}
-{% load static from staticfiles %}
-{% load base_tags %}
 
 {% block title %} {% trans "Maps.tt" %}{% endblock %}
 
@@ -50,7 +48,7 @@
       {% endblock bigsearch %}
 
       {% block datasets %}
-    
+
       {% endblock datasets %}
 
       {% block showcase %}
