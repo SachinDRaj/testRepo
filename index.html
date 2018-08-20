@@ -7,9 +7,6 @@
 
 
 {% block hero %}
-{% if block.super %}
-{{ block.super }}
-{% else %}
 <div class="jumbotron">
 	<div class="container">
 		<h1>{% trans "Welcome" %}</h1>
@@ -17,33 +14,50 @@
 		<p>{% blocktrans %}Maps.tt provides a repository for sharing geospatial data and maps collected from Trinidad and Tobago. It is an open source platform built using Geonode.{% endblocktrans %}</p>
 	</div>
 </div>
-{% endif %}
 {% endblock hero %}
 
 
 
 {% block datasets %}
-  <section id="latestLayers">
+  <section style="padding-bottom:30px">
 		<div class="container">
 
       <div class="row">
           <div class="col-md-6">
-              <h5>Latest Layers</h5>
+              <h5 style="text-align:center;">Latest Layers</h5>
               <hr>
 
 
-                  <div id="layerCarousel" class="carousel slide carousel-v1">
+							<div id="layerCarousel" class="carousel slide" style="
+							box-shadow:  3px 3px 5px -1px rgba(0,0,0,0.75);
+							margin-bottom: 30px;
+							">
                       <div class="carousel-inner">
 
                               <div class="item">
                                   <a href="/layers/geonode%3Akenya_regreening_sites">
                                       <img class="thumb" src="http://landscapeportal.org/uploaded/thumbs/layer-1f07b220-9b13-11e8-a057-52540056bf6e-thumb.png" width="100%" title="Kenya project action sites" alt="">
                                   </a>
-                                  <div class="carousel-caption">
+                                  <!-- <div class="carousel-caption">
                                       <p>
                                           <a href="/layers/geonode%3Akenya_regreening_sites">Kenya project action sites</a>
                                       </p>
-                                  </div>
+                                  </div> -->
+																	<h2 class="media-heading" style="
+																	position: absolute;
+																	left: 0;
+																	right: 0;
+																	bottom: 0;
+																	padding-top: 12px;
+																	padding-bottom: 12px;
+																	padding-right: 10px;
+																	padding-left: 10px;
+																	background-color: rgba(0,0,0,0.8);
+																	margin: 0;
+																	font-size: 13px;
+																	color: #fff;
+																	z-index: 1;
+																	">Kenya project action sites</h2>
                               </div>
 
                               <div class="item">
@@ -104,11 +118,14 @@
 
           </div>
           <div class="col-md-6">
-              <h5>Latest Maps</h5>
+              <h5 style="text-align:center;">Latest Maps</h5>
               <hr>
 
 
-                  <div id="mapCarousel" class="carousel slide carousel-v1">
+                  <div id="mapCarousel" class="carousel slide" style="
+									box-shadow:  3px 3px 5px -1px rgba(0,0,0,0.75);
+									margin-bottom: 30px;
+									">
                       <div class="carousel-inner">
 
 
